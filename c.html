@@ -1,0 +1,164 @@
+<html>
+  <head>
+      <title>All about C language</title>
+  </head>
+  <body>
+      <h1 align=center>C programming language</h1>
+      <h3>About</h3>
+      <p>
+        The base or father of programming languages is 'ALGOL.' In 1967, a new computer programming language was announced called as 'BCPL' which stands for Basic Combined Programming Language.In 1972, a great computer scientist Dennis Ritchie created a new programming language called 'C' at the Bell Laboratories. It was created from 'ALGOL', 'BCPL' and 'B' programming languages. 'C' programming language contains all the features of these languages and many more additional concepts that make it unique from other languages.
+      </p>
+      <p>
+        'C' is a powerful programming language which is strongly associated with the UNIX operating system. Even most of the UNIX operating system is coded in 'C'. Initially 'C' programming was limited to the UNIX operating system, but as it started spreading around the world, it became commercial, and many compilers were released for cross-platform systems. Today 'C' runs under a variety of operating systems and hardware platforms. As it started evolving many different versions of the language were released. At times it became difficult for the developers to keep up with the latest version as the systems were running under the older versions. To assure that 'C' language will remain standard, American National Standards Institute (ANSI) defined a commercial standard for 'C' language in 1989. Later, it was approved by the International Standards Organization (ISO) in 1990. 'C' programming language is also called as 'ANSI C'.
+      </p>
+      <h3>Salient features</h3>
+      <p>
+        The main features of C language include low-level access to memory, a simple set of keywords, and clean style, these features make C language suitable for system programmings like an operating system or compiler development.
+      </p>
+      <ol>
+          <li>Procedural Language</li>
+          <li>Fast and Efficient</li>
+          <li>Modularity</li>
+          <li>Statically Type</li>
+          <li>General Purpose Language</li>
+          <li>Rich set of built in Operators</li>
+          <li>Libraries with rich Functions</li>
+          <li>Middle Level Language</li>
+          <li>Portability</li>
+          <li>Easy to Extend</li>
+      </ol>
+      <h3>Software requirements</h3>
+      <p>
+        <ul>
+          <li>Compiler</li>
+          A compiler is a sophisticated piece of software for converting the C source code you write with your text editor into the machine code that you can execute on your computer.When executing (running), the compiler first parses (or analyzes) all of the language statements syntactically one after the other and then, in one or more successive stages or "passes", builds the output code, making sure that statements that refer to other statements are referred to correctly in the final code.
+          <li>Text editor</li>
+          Aside from a compiler, the only other software requirement is a text editor for writing and saving your C code. Note that a text editor is different from a word processor, a piece of software with many features for creating visually appealing documents. Unlike word processors, text editors are primarily designed to create plain text files. On Windows, the Notepad text editor can be used but it does not offer any advanced capabilities such as syntax highlighting and code completion. There are hundreds of text editors (see List of Text Editors). Among the most popular are Notepad++ for Windows as well as Atom, Sublime Text, gedit, Vim and Emacs which are also available on other operating systems (“cross-platform”). These text editors come with syntax highlighting and line numbers, which makes code easier to read at a glance, and to spot syntax errors.
+        </ul>
+      </p>
+      <h3>Basic commands</h3>
+      Let us understand the basic commands in C programming with an example program to print “Hello World!".
+      <p>
+        #include &ltstdio.h> <br>
+        int main()<br>
+        {<br>
+          /*_some_comments_*/<br>
+          printf(“Hello_World! “);<br>
+          getch();<br>
+          return 0;<br>
+        }<br>
+        <ul>
+          <li>#include &ltstdio.h></li>
+          This command includes standard input output header file(stdio.h) from the C library before compiling a C program
+          <li>int main()</li>
+          It is the main function from where C program execution begins.
+          <li>{</li>
+          Indicates the beginning of the main function.
+          <li>/*_some_comments_*/</li>
+          Whatever written inside this command “/*   */” inside a C program, it will not be considered for compilation and execution.
+          <li>printf(“Hello_World! “);</li>
+          This command prints the output on the screen.
+          <li>getch();</li>
+          This command is used for any character input from keyboard.
+          <li>return 0;</li>
+          This command is used to terminate a C program (main function) and it returns 0.
+          <li>}</li>
+          It is used to indicate the end of the main function.
+        </ul>
+      </p>
+      <h3>Variables in C</h3>
+      <p>
+        A variable is a name of the memory location. It is used to store data. Its value can be changed, and it can be reused many times. A variable can have alphabets, digits, and underscore. A variable name can start with the alphabet, and underscore only. It can't start with a digit. No whitespace is allowed within the variable name. A variable name must not be any reserved word or keyword, e.g. int, float, etc. The various types of variables in C are as follows.
+      <ul>
+        <li>local variable</li>
+        <li>global variable</li>
+        <li>static variable</li>
+        <li>automatic variable</li>
+        <li>external variable</li>
+      </ul>
+      </p>
+      <h3>Data types in C</h3>
+      <p>
+        Each variable in C has an associated data type. Each data type requires different amounts of memory and has some specific operations which can be performed over it. Let us briefly describe them one by one. Following are the examples of some very common data types used in C:<br>
+        char: The most basic data type in C. It stores a single character and requires a single byte of memory in almost all compilers.<br>
+        int: As the name suggests, an int variable is used to store an integer.<br>
+        float: It is used to store decimal numbers (numbers with floating point value) with single precision.<br>
+        double: It is used to store decimal numbers (numbers with floating point value) with double precision.<br>
+        Different data types also have different ranges upto which they can store numbers. These ranges may vary from compiler to compiler.<br>\
+      </p>
+      <h3>Functions in C</h3>
+      <p>
+        In c, we can divide a large program into the basic building blocks known as function. The function contains the set of programming statements enclosed by {}. A function can be called multiple times to provide reusability and modularity to the C program. In other words, we can say that the collection of functions creates a program. The function is also known as procedureor subroutinein other programming languages.<br>
+        There are two types of functions in C programming:
+        <ol>
+          <li>Library Functions: are the functions which are declared in the C header files such as scanf(), printf(), gets(), puts(), ceil(), floor() etc.</li>
+          <li>User-defined functions: are the functions which are created by the C programmer, so that he/she can use it many times. It reduces the complexity of a big program and optimizes the code.</li>
+        </ol>
+      </p>
+      <h3>Pointers in C</h3>
+      <p>
+        The pointer in C language is a variable which stores the address of another variable. This variable can be of type int, char, array, function, or any other pointer. The size of the pointer depends on the architecture. However, in 32-bit architecture the size of a pointer is 2 byte. By the help of * (indirection operator), we can print the value of pointer variable p.
+      </p>
+      <h3>Strings in C</h3>
+      <p>
+        The string can be defined as the one-dimensional array of characters terminated by a null ('\0'). The character array or the string is used to manipulate text such as word or sentences. Each character in the array occupies one byte of memory, and the last character must always be 0. The termination character ('\0') is important in a string since it is the only way to identify where the string ends. When we define a string as char s[10], the character s[10] is implicitly initialized with the null in the memory.<br>
+        There are two ways to declare a string in c language.
+        <ul>
+          <li>By char array</li>
+          <li>By string literal</li>
+        </ul>
+        There are two main differences between char array and literal. We need to add the null character '\0' at the end of the array by ourself whereas, it is appended internally by the compiler in the case of the character array.Secondly, the string literal cannot be reassigned to another set of characters whereas, we can reassign the characters of the array.
+      </p>
+      <h3>Structures in C</h3>
+      <p>
+        In C, there are cases where we need to store multiple attributes of an entity. It is not necessary that an entity has all the information of one type only. It can have different attributes of different data types. For example, an entity Student may have its name (string), roll number (int), marks (float). To store such type of information regarding an entity student, we have the following approaches:<br>
+        Construct individual arrays for storing names, roll numbers, and marks. OR<br>
+        Use a special data structure to store the collection of different data types.<br><br>
+        Structure in c is a user-defined data type that enables us to store the collection of different data types. Each element of a structure is called a member. Structures can simulate the use of classes and templates as it can store various information. The struct keyword is used to define the structure.
+      </p>
+      <h3>File handling in C</h3>
+      <p>
+        In programming, we may require some specific input data to be generated several numbers of times. Sometimes, it is not enough to only display the data on the console. The data to be displayed may be very large, and only a limited amount of data can be displayed on the console, and since the memory is volatile, it is impossible to recover the programmatically generated data again and again. However, if we need to do so, we may store it onto the local file system which is volatile and can be accessed every time. Here, comes the need of file handling in C.<br>
+        File handling in C enables us to create, update, read, and delete the files stored on the local file system through our C program. The following operations can be performed on a file.
+        <ol>
+          <li>Creation of the new file</li>
+          <li>Opening an existing file</li>
+          <li>Reading from the file</li>
+          <li>Writing to the file</li>
+          <li>Deleting the file</li>
+        </ol>
+      </p>
+	  </style>
+	  <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<div class="row">
+  <div class="column">
+<a href="https://www.google.co.in/books/edition/PHP_and_MySQL_Web_Development/G4dTRyvpfhoC?hl=en&gbpv=0&kptab=overview"><img src="images/book1.png"
+style="width:70%"><br>1</img></a><br>
+</div>
+<div class="column">
+<a href="https://www.google.co.in/books/edition/Php_The_Complete_Reference/bGS4CmJY0I8C?hl=en&gbpv=0"><img src="images/book2.png" style="width:70%"><br>2</img></a><br>
+</div>
+<div class="column">
+<a href="https://www.google.co.in/books/edition/Php_A_Beginner_S_Gd/pJHuc5c-Qc8C?hl=en&gbpv=0"><img src="images/book3.png" style="width:70%"><br>3</img></a><br>
+</div>
+</div>
+<footer align="right">Created by : Team 7</footer>
+</body>
+</html>

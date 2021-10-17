@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+<h1 align="center">HTML COURSE</h1>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/img1.jfif" style="width:100%" height="450">
+  <div class="text">HTML</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/img.png" style="width:100%" height="450">
+  <div class="text">Code</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/img2.jpg" style="width:100%" height="450">
+  <div class="text">HTML</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h2 align="center"><u>What is HTML</u></h2>
+<p>HTML is an acronym which stands for <b>Hyper Text Markup Language</b>which is used for creating web pages and web applications. Let's see what is meant by Hypertext Markup Language, and Web page.</p>
+<ol>
+<li>Hyper Text: HyperText simply means "Text within Text." A text has a link within it, is a hypertext. Whenever you click on a link which brings you to a new webpage, you have clicked on a hypertext.HyperText is a way to link two or more web pages (HTML documents) with each other.<br><br>
+<li>Markup language: A markup language is a computer language that is used to apply layout and formatting conventions to a text document. Markup language makes text more interactive and dynamic.It can turn text into images, tables, links, etc.<br><br>
+<li>Web Page: A web page is a document which is commonly written in HTML and translated by a web browser.A web page can be identified by entering an URL. A Web page can be of the static or dynamic type.With the help of HTML only, we can create static web pages.
+</ol>
+<h2 align="center"><u>Basic Structure Of HTML</u></h2><br>
+<img src="images/img4.png" width="600" height="400">
+<img src="images/img5.jpg" width="700" height="400" align="right">
+<h2 align="center"><u>Elements In HTML</u></h2>
+<p>An HTML element is defined by a start tag, some content, and an end tag.</p>
+The HTML element is everything from the start tag to the end tag:<br>
+<tagname>Content goes here...</tagname><br>
+Examples of some HTML elements:<br>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<p>Nested HTML Elements<br>
+HTML elements can be nested (this means that elements can contain other elements).<br>
+
+All HTML documents consist of nested HTML elements.<br>
+
+The following example contains four HTML elements (html, body, h1 and p):
+</p>
+<h3>Example:</h3>
+<img src="images/img6.png" width="600" height="400">
+
+<img src="images/img7.png" width="500" height="400" align="right">
+<h2 align="center"><u>Attributes In HTML</u></h2>
+
+<ul>
+<li>All HTML elements can have attributes</li>
+<li>Attributes provide additional information about elements</li>
+<li>Attributes are always specified in the start tag</li>
+<li>Attributes usually come in name/value pairs like: name="value"</li>
+</ul>
+</li>
+<h3>The href Attribute</h3>
+<p>The <b>a</b> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</p>
+<h3>The src Attribute</h3>
+<p>The <b>img</b> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:</p>
+
+<p><u>There are two ways to specify the URL in the src attribute:</u><br><br>
+
+<b>1. Absolute URL - </b>Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".<br><br>
+
+Notes: External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.<br><br>
+
+<b>2. Relative URL -</b> Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".</p><br>
+<h3>The width and height Attributes</h3>
+<p>The <b>img</b> tag should also contain the width and height attributes, which specifies the width and height of the image (in pixels):The width and height Attributes
+The <b>img</b> tag should also contain the width and height attributes, which specifies the width and height of the image (in pixels):</p>
+<h3>The alt Attribute</h3>
+The required <b>alt</b> attribute for the <b>img</b> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to slow connection, or an error in the src attribute, or if the user uses a screen reader.
+<h2 align="center"><u>HTML Tables</u></h2>
+<p><u>Define an HTML Table</u><br><br>
+The <b>table</b> tag defines an HTML table.<br>
+
+Each table row is defined with a <b>tr</b> tag. Each table header is defined with a <th> tag. Each table data/cell is defined with a <b>td</b> tag.<br>
+
+By default, the text in <b>th</b> elements are bold and centered.<br>
+
+By default, the text in <b>td</b> elements are regular and left-aligned.<br></p>
+<h3>Example:</h3>
+<img src="images/img8.png" width="800" height="400">
+<img src="images/img9.png" width="600" height="400" align="center">
+<h2 align="center"><u>List In HTML</u></h2>
+<img src="images/img10.png" width="600" height="500"><br>
+<p><u>Ordered HTML List</u><br>
+An ordered list starts with the <b>ol</b> tag. Each list item starts with the <b>li</b> tag.<p>
+<p><u>Unordered HTML List</u><br>
+An unordered list starts with the <b>ul</b> tag. Each list item starts with the <b>li</b> tag.<p>
+<h2><u><b>Book for HTML</u></b></h2>
+<a href="https://www.amazon.com/HTML-101-Essential-Beginners-Learning/dp/1976874696?tag=uuid10-20">1.HTML 101</a><br>
+
+<a href="https://www.amazon.com/dp/1839211563?tag=uuid10-20">2.Responsive Web Design with HTML5 and CSS</a><br>
+
+<a href="https://www.tutorialspoint.com/html/html_tutorial.pdf">3.FREE PDF OF HTML</a>
+
+ <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<div class="row">
+  <div class="column">
+<a href="https://www.google.co.in/books/edition/PHP_and_MySQL_Web_Development/G4dTRyvpfhoC?hl=en&gbpv=0&kptab=overview"><img src="images/book1.png"
+style="width:70%"><br>1</img></a><br>
+</div>
+<div class="column">
+<a href="https://www.google.co.in/books/edition/Php_The_Complete_Reference/bGS4CmJY0I8C?hl=en&gbpv=0"><img src="images/book2.png" style="width:70%"><br>2</img></a><br>
+</div>
+<div class="column">
+<a href="https://www.tutorialspoint.com/html/html_tutorial.pdf"><img src="images/book3.png" style="width:70%"><br>3</img></a><br>
+</div>
+</div>
+<footer align="right">Created by : Team 7</footer>
+
+
+
+
+
+</body>
+</html> 

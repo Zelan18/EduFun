@@ -1,0 +1,251 @@
+<html>
+<head></head>
+<body>
+<h1 align="center">JAVA</h1>
+<p>Java programming language was originally developed by Sun Microsystems which was
+initiated by James Gosling and released in 1995 as core component of Sun Microsystems'
+Java platform (Java 1.0 [J2SE]).<br>
+The latest release of the Java Standard Edition is Java SE 8. With the advancement of Java
+and its widespread popularity, multiple configurations were built to suit various types of
+platforms. For example: J2EE for Enterprise Applications, J2ME for Mobile Applications.
+The new J2 versions were renamed as Java SE, Java EE, and Java ME respectively. Java
+is guaranteed to be Write Once, Run Anywhere.<br>
+Java is:<br>
+ Object Oriented: In Java, everything is an Object. Java can be easily extended
+since it is based on the Object model.<br>
+ Platform Independent: Unlike many other programming languages including C
+and C++, when Java is compiled, it is not compiled into platform specific machine,
+rather into platform independent byte code. This byte code is distributed over the
+web and interpreted by the Virtual Machine (JVM) on whichever platform it is being
+run on.<br>
+ Simple: Java is designed to be easy to learn. If you understand the basic concept
+of OOP Java, it would be easy to master.<br>
+ Secure: With Java's secure feature it enables to develop virus-free, tamper-free
+systems. Authentication techniques are based on public-key encryption.<br>
+ Architecture-neutral: Java compiler generates an architecture-neutral object
+file format, which makes the compiled code executable on many processors, with
+the presence of Java runtime system.<br>
+ Portable: Being architecture-neutral and having no implementation dependent
+aspects of the specification makes Java portable. Compiler in Java is written in
+ANSI C with a clean portability boundary, which is a POSIX subset.<br>
+ Robust: Java makes an effort to eliminate error prone situations by emphasizing
+mainly on compile time error checking and runtime checking.<br>
+ Multithreaded: With Java's multithreaded feature it is possible to write programs
+that can perform many tasks simultaneously. This design feature allows the
+developers to construct interactive applications that can run smoothly.<br>
+ Interpreted: Java byte code is translated on the fly to native machine
+instructions and is not stored anywhere. The development process is more rapid
+and analytical since the linking is an incremental and light-weight process.<br>
+ High Performance: With the use of Just-In-Time compilers, Java enables high
+performance.<br>
+1. Java – Overview 
+Java
+3
+ Distributed: Java is designed for the distributed environment of the internet.<br>
+ Dynamic: Java is considered to be more dynamic than C or C++ since it is
+designed to adapt to an evolving environment. Java programs can carry extensive
+amount of run-time information that can be used to verify and resolve accesses
+to objects on run-time.<br><br><br>Tools You Will Need
+For performing the examples discussed in this tutorial, you will need a Pentium 200-MHz
+computer with a minimum of 64 MB of RAM (128 MB of RAM recommended).
+You will also need the following softwares:
+ Linux 7.1 or Windows xp/7/8 operating system
+ Java JDK 8
+ Microsoft Notepad or any other text editor
+This tutorial will provide the necessary skills to create GUI, networking, and web
+applications using Java.</p>
+<h1>Synatx:</h1>
+<p>public class MyFirstJavaProgram {
+ public static void main(String []args) {
+ System.out.println("Hello World");
+ }
+}</p>
+<h1>Popular Java Editors</h1>
+<p>To write your Java programs, you will need a text editor. There are even more
+sophisticated IDEs available in the market. But for now, you can consider one of the
+following:<br>
+ Notepad: On Windows machine, you can use any simple text editor like Notepad
+(Recommended for this tutorial), TextPad.<br>
+ Netbeans: A Java IDE that is open-source and free, which can be downloaded
+from http://www.netbeans.org/index.html.<br>
+ Eclipse: A Java IDE developed by the eclipse open-source community and can be
+downloaded from http://www.eclipse.org/.<br><br><br>When we consider a Java program, it can be defined as a collection of objects that
+communicate via invoking each other's methods. Let us now briefly look into what do class,
+object, methods, and instance variables mean.<br>
+ Object - Objects have states and behaviors. Example: A dog has states - color,
+name, breed as well as behavior such as wagging their tail, barking, eating. An
+object is an instance of a class.<br>
+ Class - A class can be defined as a template/blueprint that describes the
+behavior/state that the object of its type supports.<br>
+ Methods - A method is basically a behavior. A class can contain many methods.
+It is in methods where the logics are written, data is manipulated and all the
+actions are executed.<br>
+ Instance Variables - Each object has its unique set of instance variables. An
+object's state is created by the values assigned to these instance variables.<br>
+
+
+</p>
+<h1>Let us look at a simple code that will print the words Hello World.</h1>
+<p>public class MyFirstJavaProgram {<br>
+ /* This is my first java program.<br>
+ * This will print 'Hello World' as the output<br>
+ */<br>
+ public static void main(String []args) {<br>
+ System.out.println("Hello World"); // prints Hello World<br>
+ }<br>
+}</p>
+<h2>Basic Syntax</h2>
+<p>About Java programs, it is very important to keep in mind the following points.<br>
+ Case Sensitivity - Java is case sensitive, which means
+identifier Helloand hello would have different meaning in Java.<br>
+ Class Names - For all class names the first letter should be in Upper Case.
+If several words are used to form a name of the class, each inner word's first letter
+should be in Upper Case.<br>
+Example: class MyFirstJavaClass<br>
+ Method Names - All method names should start with a Lower Case letter.<br>
+If several words are used to form the name of the method, then each inner word's
+first letter should be in Upper Case.<br>
+Example: public void myMethodName()<br>
+ Program File Name - Name of the program file should exactly match the class
+name.<br>
+When saving the file, you should save it using the class name (Remember Java is
+case sensitive) and append '.java' to the end of the name (if the file name and the
+class name do not match, your program will not compile).<br>
+Example: Assume 'MyFirstJavaProgram' is the class name. Then the file should
+be saved as 'MyFirstJavaProgram.java'<br>
+ public static void main(String args[]) - Java program processing starts from
+the main() method which is a mandatory part of every Java program.</p>
+<h1>Java Identifiers</h1>
+<p>All Java components require names. Names used for classes, variables, and methods are
+called identifiers.<br>
+In Java, there are several points to remember about identifiers. They are as follows:<br>
+ All identifiers should begin with a letter (A to Z or a to z), currency character ($)
+or an underscore (_).<br>
+ After the first character, identifiers can have any combination of characters.<br>
+ A key word cannot be used as an identifier.<br>
+ Most importantly, identifiers are case sensitive.<br>
+ Examples of legal identifiers: age, $salary, _value, __1_value.<br>
+ Examples of illegal identifiers: 123abc, -salary</p>
+<h1>Java Modifiers</h1>
+<p>Like other languages, it is possible to modify classes, methods, etc., by using modifiers.
+There are two categories of modifiers:<br>
+ Access Modifiers: default, public , protected, private<br>
+ Non-access Modifiers: final, abstract, strictfp<br>
+We will be looking into more details about modifiers in the next section.</p>
+<h1>Java Variables</h1>
+<p>Following are the types of variables in Java:<br>
+ Local Variables<br>
+ Class Variables (Static Variables)<br>
+ Instance Variables (Non-static Variables)</p>
+<h1>Comments in Java</h1>
+<p>Java supports single-line and multi-line comments very similar to C and C++. All
+characters available inside any comment are ignored by Java compiler.</p>
+<p>public class MyFirstJavaProgram{<br>
+ /* This is my first java program.<br>
+ * This will print 'Hello World' as the output<br>
+ * This is an example of multi-line comments.<br>
+ */<br>
+ public static void main(String []args){<br>
+ // This is an example of single line comment<br>
+ /* This is also an example of single line comment. */<br>
+ System.out.println("Hello World");<br>
+ }<br>
+}</p>
+<h1>Inheritance</h1>
+<p>In Java, classes can be derived from classes. Basically, if you need to create a new class
+and here is already a class that has some of the code you require, then it is possible to
+derive your new class from the already existing code.
+This concept allows you to reuse the fields and methods of the existing class without having
+to rewrite the code in a new class. In this scenario, the existing class is called the
+superclass and the derived class is called the subclass.<br>
+<h1>Interfaces</h1>
+In Java language, an interface can be defined as a contract between objects on how to
+communicate with each other. Interfaces play a vital role when it comes to the concept of
+inheritance.
+An interface defines the methods, a deriving class (subclass) should use. But the
+implementation of the methods is totally up to the subclass.</p>
+<h1>Object and Classes</h1>
+<p>Java is an Object-Oriented Language. As a language that has the Object-Oriented feature,
+Java supports the following fundamental concepts:<br>
+ Polymorphism<br>
+ Inheritance<br>
+ Encapsulation<br>
+ Abstraction<br>
+ Classes<br>
+ Objects<br>
+ Instance<br>
+ Method<br>
+ Message Parsing<br>
+</p>
+<h1>Objects in Java</h1>
+<p>Let us now look deep into what are objects. If we consider the real-world, we can find
+many objects around us, cars, dogs, humans, etc. All these objects have a state and a
+behavior.
+If we consider a dog, then its state is - name, breed, color, and the behavior is - barking,
+wagging the tail, running.
+If you compare the software object with a real-world object, they have very similar
+characteristics.
+Software objects also have a state and a behavior. A software object's state is stored in
+fields and behavior is shown via methods.
+So in software development, methods operate on the internal state of an object and the
+object-to-object communication is done via methods.
+</p>
+<h1>Classes in Java</h1>
+<p>A class can contain any of the following variable types.<br>
+ Local variables: Variables defined inside methods, constructors or blocks are
+called local variables. The variable will be declared and initialized within the
+method and the variable will be destroyed when the method has completed.<br>
+ Instance variables: Instance variables are variables within a class but outside
+any method. These variables are initialized when the class is instantiated. Instance
+variables can be accessed from inside any method, constructor or blocks of that
+particular class.<br>
+ Class variables: Class variables are variables declared within a class, outside any
+method, with the static keyword.<br>
+A class can have any number of methods to access the value of various kinds of methods.
+In the above example, barking(), hungry() and sleeping() are methods.<br>
+Following are some of the important topics that need to be discussed when looking into
+classes of the Java Language.</p>
+<h1>Constructors</h1>
+<p>When discussing about classes, one of the most important sub topic would be constructors.
+Every class has a constructor. If we do not explicitly write a constructor for a class, the
+Java compiler builds a default constructor for that class.
+Java
+15
+Each time a new object is created, at least one constructor will be invoked. The main rule
+of constructors is that they should have the same name as the class. A class can have
+more than one constructor.<br><br>
+public class Puppy{<br>
+ public Puppy(){<br>
+ }<br>
+ public Puppy(String name){<br>
+ // This constructor has one parameter, name.<br>
+ }<br>
+}<br>
+
+</p>
+<h1>Creating an Object</h1>
+<p>As mentioned previously, a class provides the blueprints for objects. So basically, an object
+is created from a class. In Java, the new keyword is used to create new objects.<br>
+There are three steps when creating an object from a class:<br>
+ Declaration: A variable declaration with a variable name with an object type.<br>
+ Instantiation: The 'new' keyword is used to create the object.<br>
+ Initialization: The 'new' keyword is followed by a call to a constructor. This call
+initializes the new object.<br>
+public class Puppy{<br>
+ public Puppy(String name){<br>
+ // This constructor has one parameter, name.<br>
+ System.out.println("Passed Name is :" + name );<br>
+ }<br>
+
+ public static void main(String []args){<br>
+ // Following statement would create an object myPuppy<br>
+ Puppy myPuppy = new Puppy( "tommy" );<br>
+ }<br>
+}<br>
+</p>
+<br>
+<br>
+<br>
+ <h2>Here Are Some Java Pdfs :</h2> 1)<a href="LearnJava.pdf">Learn Java</a><br>2)<a href="javanotes5.pdf">Java Notes</a><br>3)<a href="JavaP.pdf">Programming with Java</a>   
+</body>
+</html>

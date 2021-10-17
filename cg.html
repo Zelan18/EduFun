@@ -1,0 +1,539 @@
+<html>
+<head></head>
+<body>
+	<h1 align="center">COMPUTER GRAPHICS</h1>
+	<p> Computer graphics is the branch of computer science that deals with generating images with the aid of computers. Today, computer graphics is a core technology in digital photography, film, video games, cell phone and computer displays, and many specialized applications. A great deal of specialized hardware and software has been developed, with the displays of most devices being driven by computer graphics hardware. It is a vast and recently developed area of computer science. The phrase was coined in 1960 by computer graphics researchers Verne Hudson and William Fetter of Boeing. It is often abbreviated as CG, or typically in the context of film as computer generated imagery (CGI).
+
+Some topics in computer graphics include user interface design, sprite graphics, rendering, ray tracing, geometry processing, computer animation, vector graphics, 3D modeling, shaders, GPU design, implicit surface visualization, image processing, computational photography, scientific visualization, computational geometry and computer vision, among others. The overall methodology depends heavily on the underlying sciences of geometry, optics, physics, and perception.
+
+Computer graphics is responsible for displaying art and image data effectively and meaningfully to the consumer. It is also used for processing image data received from the physical world, such as photo and video content. Computer graphics development has had a significant impact on many types of media and has revolutionized animation, movies, advertising, video games, and graphic design in general.</p>
+<h1>Interactive Vs Non Interactive Graphics:</h1>
+
+<p>
+The choice between interactive and non-interactive
+computer graphics depends on the application. Interactive graphics is used for systems where the user plays
+a significant and active role in the system. A CAD/CAM
+system must be interactive since the user must create
+the object and its components as they are viewed on
+the computer monitor. Visualization systems are also
+frequently interactive so that the user can replay
+animation sequences, magnify parts of the image that
+appear interesting (zooming), and alter colors used so
+that different phenomena are highlighted. Applications
+that by their nature require frequent user input are
+programmed as interactive systems.
+Non-interactive graphics systems are primarily those
+that are so computationally complex that the production of a single image takes longer than the time even
+the most patient user would wait. The production of
+realistic imagery using techniques of radiosity and ray
+tracing (discussed later) and the production of animated sequences can be very time-consuming. In these
+cases, the user will define the environment for the
+image (or for an animation sequence, the motions to
+occur) using some preprocessing system. This definition then serves as the input for the image generator,
+which can be run in batch or background mode. The
+resulting images are usually stored in a file and viewed
+at a later time using a device-dependent postprocessor. Some complex animation sequences of a few
+minutes duration take tens of hours of compute time
+to prepare.
+As computer hardware improves, the lines between
+interactive and non-interactive graphics are being
+blurred. There are dramatic improvements in realtime animation, especially in the areas of games and
+system simulations (e.g. flight simulators). As this
+continues, there will be fewer applications of graphics
+that require non-interactive batch or background
+processing</p>
+<h1>Some Representative Uses of
+Computer Graphics :</h1>
+<h3>1)Visualization</h3>
+<p>Visualization is a very broad term that includes the
+creation of images for science, business, and many
+other applications. The basic idea is to use color theory
+and design to present information in a way that efficiently and effectively displays large amounts of data
+to improve understanding, reveal trends, or display
+phenomena.
+In science, experimentation with natural systems and
+computer simulations of them produce large amounts
+of data. Visualization allows a user to capture and display this data in a graphical format to give the scientist
+a better understanding of the forces at work. For example, an animated sequence of warm and cold water
+mixing can represent direction of water movement 
+
+with an arrow, water velocity by the arrow size, and
+temperature by arrow color for various data collection
+locations. This animation can yield a better understanding of how fluids mix and how energy is transferred from hot to cold water.
+In medicine, graphics is used to enhance X-rays or
+other scanned data. Advanced systems will use this
+data to create a model of the person that allows a
+doctor to plan and practice a surgical procedure before
+the actual operation even begins.
+In business, sales, production, or marketing, data can
+be visualized to improve corporate decision-making,
+Computer-aided design and manufacturing systems
+are used to create, test, and set up production of new
+products. On the consumer level, visualizations are
+used, for example, to show the results of a landscaping
+change, building addition, or change in appearance. </p>
+<h3>2)Games</h3>
+<p>Computer games have shown great progress from the
+simple ball and paddle games of the 1970s. Today,
+computer games have high-quality graphics, produced
+in real time, along with fast-paced user interaction.
+These games are produced as either standalone units
+for arcades, tabletop units that connect to a television
+or monitor, or software for use on a computer. Examples include computer versions of popular board games
+or television game shows, sports or athletic competitions, and combative games that are frequently in
+futuristic settings. </p>
+<h3>3)Graphical User Interface(GUI)</h3>
+<p>Computer users now expect that software will have an
+interface that makes it easy to use. Interaction with
+computers is now commonly done through graphical
+user interfaces that present files and directories as
+icons, that allow data to be moved or copied by dragging icons around the screen, and that request information through buttons and check boxes on dialog
+boxes that pop up when needed. These graphical interfaces eliminate the need to learn and remember the
+typed commands that once made using the computer a
+daunting task. </p>
+<h3>4)Animation</h3>
+<p>The most familiar graphics application is animation;
+however, computer-generated animated movies are
+only one of the uses of animation. Computer-generated animation is also part of training simulators and
+videogames. Animation is affecting the legal system as
+litigants design animations based on physical evidence,
+created to show a jury “what happened.” </p>
+<h1>Modelling:</h1>
+<p>Before a computer can create an image,
+descriptions must be developed for all of the objects
+that are to appear in the image. The elements of these
+object descriptions can be simple or complex depending not only on the detail in the object but also the
+method of description. Model descriptions can be
+created by hand using a plain text editor to enter the
+model data or by software that allows interactive
+specification while a crude depiction of the model is
+displayed. Many of the models used in graphics are
+highly mathematical and rely on the equations of lines,
+planes, circles, spheres, ovals, and complex curves
+and surfaces. 
+
+The definition of objects is typically done in some
+Cartesian coordinate system. An object can be defined
+in its own system that is then mapped into another
+world coordinate system that all the objects share, or
+the objects can be defined in the world coordinate
+system directly. This choice depends in part on the
+model, any modeling software being used, and the
+capabilities of the rendering program that will create
+the image.
+Models can be hierarchical, defining a collection of
+simple objects and then using those to define larger and
+more complex objects. An example of this would be a
+model of a bicycle that had a simple wheel object
+defined that was then replicated for the front and back
+wheels. Models can also be functionally based, giving
+the parameters necessary for calculations that are done
+when the image is being rendered. This data amplification technique is commonly used in modeling natural
+phenomena because these objects are so complex that
+to specify all of the detail would be too cumbersome
+and would produce enormous amounts of data.
+Object attributes. Each object that is displayed has
+parameters that determine its position and size, as well
+as other parameters that determine its appearance.
+For simple objects drawn as lines, attributes specify
+the color and whether the lines are solid or dashed in
+some fashion. Text attributes include the font type
+(e.g. Courier, Helvetica) and the character style (e.g.
+bold, italic). See TYPEFONT.<br><br>
+As objects become more complex, we have more
+parameters that can be specified. For three-dimensional objects, we typically specify the following types
+of properties:<br><br>
+1)Reflectivity What portion of light that strikes an
+object reflects off it? Is the reflection sharp like a
+mirror (specular) or dull ike metal? Does the
+reflection stay focused, or does it diffuse and
+spread?<br><br>
+2)Refractivity What portion of light that strikes an
+object refracts through it? How much does the
+refraction shift or bend the light (as a pencil in a
+glass of water appears bent)? Is the object transparent like clear glass or translucent like tracing
+paper?<br><br>
+3)Absorptivity How much of the light energy
+striking an object is absorbed by the object and
+neither reflected nor refracted?<br><br>
+4)Texture Does the object have a smooth or rough
+surface? If rough, is there a pattern to the roughness or is it random?
+Additional properties may be specified for objects
+based on the needs of the model type or on the rendering method to be used. </p>
+<h2>Modelling two dimensional objects:</h2>
+<p> Two-dimensional
+objects include simple objects such as circles, lines,
+and polygons, as well as more complex curves. Many
+of these, however, can be described through simple
+mathematical equations. This section will look at the
+issues involved in modeling these objects.
+Circles can be specified by their center point and
+radius. An arc is a portion of circle, and usually has
+the additional parameters of starting and ending radii
+with the arc conventionally drawn counterclockwise
+between these two angles. An oval or ellipse can be
+specified by two centers of curvature and a length. All
+points whose sum of distances to both centers is equal
+to the specified length are on the ellipse.
+Lines can be specified as a starting and ending point,
+or as the coefficients of the equation of a line. A polygon is specified as a list of points that are the vertices
+of the polygon. The edges of the polygon are the lines
+between successive points on this list, and the polygon is closed by also drawing an edge from the last to
+the first point, instead of duplicating the first point at
+the end of the list. Some of the algorithms for drawing a polygon may assume that the polygon is convex
+(so that a straight line between any two points inside
+the polygon is entirely in the polygon as well) and does
+not have edges that cross each other.
+Two-dimensional curves can be approximated by a set
+of short lines, or can be specified by mathematical
+equations, for example, y = x’ - 3x + 5. This, however, only allows creation of simple curves. More
+elaborate curves are possible by using bicubic parametric functions.
+There are a large number of different styles of bicubic
+parametric functions, but all have some common
+features. They all require that the user specify some
+set of controlling data for the curves. This data is
+typically a set of points that control the location of the
+curve. These control points and a set of blending
+functions are used to determine the curve location.
+Fig. la shows a set of four control points and the
+resulting curve. Fig. Ib shows what happens if one of
+these control points is moved.
+Bicubic parametric functions differ according to their
+blending functions. Some will interpolate the curve
+through the first and last control points, so that they
+are on the curve; others do not. Some exhibit local
+control so that moving a control point will only change
+part of the curve, while others exhibit global control so
+that each control point will influence the entire curve but have the greatest effect on just a portion of it. For
+example, if there are five control points defining a
+curve, with local control the first third of the curve
+would be determined by points 1 through 3, the
+middle of the curve by points 2 through 4, and the last
+third of the curve by points 3 through 5. With global
+control, all five points would influence the entire shape
+of the curve, but points 1 and 2, for instance, would
+have their greatest effect on the beginning of the curve
+and points 4 and 5 on the end.
+The choice of blending functions is usually determined
+by the needs of the model. If a complex curve will need
+to be modeled by multiple sets of control points, the
+blending functions should interpolate the first and last
+control points so it is easy to have the parts of the curve
+join. If the continuity of the curve at these join points is
+highly critical, it may be easier to use blending functions with local rather than global control
+</p>
+<h2>Modelling three dimensional objects:</h2>
+<p>Simple threedimensional objects can be defined like their twodimensional counterparts. A sphere can be defined by
+specifying its center and radius. A box can be defined
+by specifying the locations of its eight vertices. If we
+place restrictions on the orientation of the box, so that
+all of its faces must be perpendicular to either the x, y,
+or z axis, then we need to specify only two vertices
+that are opposite each other, because the other six
+vertices can be derived from these two.
+A planar surface can be uniquely defined by specifying
+three non-collinear points. This plane can be considered infinite in all directions or can be triangularbounded by the lines connecting these three points.
+That is, three points (PI, P2, and P3) uniquely specify a
+plane with the equation Ax + By + Cz + D = 0. The
+first step to deriving this plane equation is to determine
+the normal to the plane. The normal is a vector (line)
+that is perpendicular to this plane. The normal is the
+cross product of the two vectors P1 P2 and P1 P3. If we
+call the first vector v, its x, y, and z components vx, vu,
+vz are the difference of the x, y, and z components of
+P1 and P2. The second vector w is determined by the
+difference of P1 and 9. The normal (A, B, C) is then
+given by
+The value of D is determined by substituting one of the
+points (PI, P2, or P3) into the plane equation and solving for D.
+There are two methods that can be used to define
+convex planar polygons that have more than three
+sides. In the first, the polygon is divided into triangular
+pieces and those are specified individually. In general,
+you need M triangles for a polygon with n + 2 sides.
+The second alternative would be to specify all of the
+vertices. This might appear to be the simpler alternative; however, it can be tricky to get four or more
+vertices of a polygon that are all in the same plane. As
+the fourth or higher points are specified, it is likely that
+they are either above or below the plane specified by
+the first three points unless they are calculated from a
+plane equation. Calculating additional points would
+require specifying two of the three (x, y, z) components
+of the point and then solving for the third.
+Curved surfaces can be defined by using a threedimensional version of bicubic curves. In this case, we
+specify sets of control points along two directions that
+are perpendicular to each other. One curve surface
+would typically be defined by a set of 16 control points
+logically arranged into four rows of four control points
+each. The blending functions are then used to interpolate in two directions between the control points
+along the rows and columns. Curved surfaces can also
+be approximated by a set of small planar patches. For
+highly curved surfaces, this approximation can get
+quite large, since the planar patches must be small if
+the result is to look reasonable. </p>
+<h1>Rendering:</h1>
+<h3>Windowing</h3>
+<p>Since large drawings cannot fit in their
+entirety on display screens, they can either be compressed to fit, thereby obscuring details and creating
+clutter, or only a portion of the total drawing can be
+displayed. The portion of a two- or three-dimensional
+object to be displayed is chosen through specification
+of a rectangular window that limits what part of the
+drawing can be seen.
+A two-dimensional window is usually defined by choosing a maximum and minimum value for its x- and
+y-coordinates, or by specifying the center of the
+window and giving its maximum relative height and
+width. Simple subtractions or comparisons suffice to
+determine whether or not a point is in view. For lines
+and polygons, a clipping operation is performed that
+discards those parts that fall outside of the window.
+Only those parts that remain inside the window are
+drawn or otherwise rendered to make them visible</p>
+<h3>Lighting Models</h3>
+<p>. As a prelude to the discussion of
+shading models, it is necessary to discuss the way in
+which the effects of incident light can be quantified for
+image production. The first type of illumination to be
+considered is ambient light, I,, present in the environment. Since ambient light has no focus or direction, this is treated as an additive factor for all objects.
+The second type of light is reflected light, which varies
+depending on the location of the light source, the
+object, and the viewer. From Lambert’s cosine law of
+physics, we know that the intensity of the diffusely
+reflected light is related to the scalar (dot) product of
+the surface normal, N, and a unit vector pointing
+toward the light source, L. The last type of illumination is specular reflection, which produces the highlights on an object. Specular reflectiondepends on the angle between the reflected vector,
+R, and the vector pointing at the viewer’s position, V.
+If these two coincide, the highlight is bright; the
+farther apart they are, the dimmer the highlight.
+A simplified version of the light calculation is given by
+the formula I = I, + I,[kd(N . L) + k,(V. R)n], where
+I, is the intensity of the light source, kd is a diffuse
+reflection coefficient, k, is a specular reflection coefficient, and n is the specular reflection exponent (when
+n is 1, the highlight is broad with blurred edges, and
+as n gets larger, the highlight is narrowed and has
+sharper edges)</p>
+<h1>Painter's and Z-Buffer algorithms:</h1>
+<p>In the Painter’s
+Algorithm, each object is broken into planar piece
+approximations that are arranged as separate units,
+according to their distance from the viewer. The algorithm now works like a painter applying paint to a
+canvas-if something is blocked by an object in front,
+the painter just paints the foreground object over it.
+The piece farthest from the viewer is drawn, then the
+second farthest, and so on. If a piece will ultimately be
+visible, nothing will be drawn over it; however, if it is
+not entirely visible, a piece drawn later will cover all or
+part of it. So the picture is drawn back to front.
+In the Z-Buffer Algorithm, there is a Z- or depth-buffer
+that has one value for each pixel in the frame buffer.
+These values represent the depth of the object of
+which the pixel is a part. For example, if an area of
+four pixels square is part of the first object, which is 4
+units away from the viewer, all of the Z-buffer values
+for these pixels would be set to 4. As each new piece is
+drawn, its depth at the pixel location is compared with
+the Z-buffer value. If the buffer value is greater, this
+piece is in front and can be drawn (and the 2-buffer
+value is updated). If the buffer value is smaller, the old
+object is closer, so the current one is not drawn at that
+point. The benefit of the Z-buffer algorithm is that it is
+not necessary to sort the pieces, as the Z-buffer does
+that implicitly.
+These two algorithms show the common space vs. time
+trade-off of computer science. The Painter’s Algorithm
+is slower because of the sorting, but it doesn’t require 
+
+the extremely large memory of the Z-buffer. With
+the low cost of computer memory, however, many
+graphics controllers include extra memory specifically
+for the Z-buffer. </p>
+<h2>Flat Shading</h2>
+<p> A problem with the Painter’s and
+Z-Buffer Algorithms is that they ignore the effects of
+the light source and use only the ambient light factor.
+Flat shading goes a bit further and includes the diffuse
+reflections as well. For each of the planar pieces, an
+intensity value is calculated from the surface normal, the direction to the light, and the ambient light
+and diffuse coefficient constants. Since none of these
+change at any point on the piece, all of the pixels in
+that piece will have the same intensity value. The
+resulting image will appear to be faceted, with ridges
+running along the boundaries of the pieces that make
+up an object </p>
+<h2>Gouraud Shading</h2>
+<p>
+ In 1971, Henri Gouraud developed
+an interpolation method that removed some of the
+discontinuities between pieces and also produced more
+realistic highlighting . The
+problem with the previous method is that a single
+normal is used for a patch that approximates a curved
+surface. Gouraud’s method keeps the normal vector
+from the actual surface for each vertex of every piece.
+This means that the normals at the vertices of a patch
+can be different from each other, but thathe normals
+where two patches touch will be the same since they
+come from the actual surface at that point.
+When each piece is being shaded, the intensity or color
+at each vertex is calculated, and then the system interpolates between them for the interior points of the
+piece. In flat shading, there is the problem of adjacent
+pieces being shaded different colors. In Gouraud shading, two pieces that share an edge will also share the
+normals at the end points of this edge and therefore
+have the same color at these end points. Hence when
+the two pieces are being shaded the colors that are
+interpolated along this shared edge will be the same,
+and the edge will not be noticeable. </p>
+<h2>Ray Tracing</h2>
+<p>In the methods examined so far, all objects
+are assumed to have a matte or dull finish. None is
+reflective, translucent, or transparent, because the
+previous methods are not able to handle these types
+of objects. Ray tracing takes the previous methods one
+step further in allowing rays of light that strike a surface
+to reflect and refract among all the objects in the scene.
+When the viewer location and pixel location on the
+screen are considered, they define a line or ray into the
+scene to be rendered. This ray is traced into the scene,
+where it can strike a matte surface object, and the pixel
+color is determined as in Phong shading. If the ray
+strikes a reflective or refractive surface, the laws of
+optics are used to determine the new direction of one
+or more rays that would result. These new rays are
+then traced recursively until they leave the scene or
+strike another surface, a computationally complex
+process that quickly degrades as the number of
+reflective and refractive objects increases. </p>
+<h2>Texture Mapping</h2>
+<p>Early computer-generated images
+used shaded objects that had unnaturally smooth
+surfaces. To produce a textured surface using the techniques discussed would require creating an excessive
+number of surface pieces that follow all of the complexities of the texture. An alternative to the explosion
+of surfaces would be to use the techniques of texture
+mapping. Texture mapping is a technique used to
+paint scanned images of a texture onto the object
+being modeled. Through an associated technique,
+called bump mapping, the appearance of the texture
+can be improved still further. 
+</p>
+<h2>Surface mapping vs bump mapping</h2>
+<p>Surface painting simply adds an image to the surface of an object.
+If the image is itself a texture, it makes the object
+appear textured. This technique requires the production of a texture file containing color values that have 
+
+traditionally been obtained by scanning a picture of a
+real object with the desired pattern.
+The shading algorithm is altered to use the texture file
+for determining the color of points on the surface. To
+do this, a mapping function is produced that converts
+surface locations into the range of the texture. As the
+surface is shaded, the locations on the surface, corresponding to pixels in the image, are mapped into the
+texture’s space, and the texture value at that point is
+used as the object’s color. This is not normally a good
+solution, since specular highlights are not affected; the
+resulting images appear to be flat surfaces that have
+had pictures painted on them.
+An obvious way to include specular highlighting would
+be to use the texture to modify the surface definition,
+but, as was mentioned, this is complex and quickly
+explodes the amount of surface information that needs
+to be stored and accessed. The alternative is to treat
+the texture as a bump map that modifies the surface
+definition at a single point for only the brief instant
+that it is being rendered.
+Where texture painting techniques alter the color of
+the surface based on the values in the texture, bump
+mapping alters the value of the surface normal at the
+point. When the bump map turns the normal away
+from the light direction, this darkens the location;
+conversely, when it turns the normal toward the light,
+the location is brightened.
+The problem with bump mapping appears with objects
+in profile. Since its surface is not actually changed as
+an object is rotated, the highlighting of the bumps
+appears to be correct until the surface reaches its profile, when the bumps disappear. </p>
+<h2>Two dimensional vs three dimensional</h2>
+<p>The
+foregoing discussion assumes a two-dimensional texture wrapped around a surface. This requires special
+conditions to be present in the map, depending on the
+surfaces to be textured. If cylinders are to be textured,
+the texture must be continuous so that, when the texture is wrapped around the cylinder, no seam appears
+where the ends meet. This is also required if the surface
+is so large that the texture needs to be repeated to cover
+it. The requirements for texturing a sphere are even
+more demanding.
+One solution to this problem is use of a three-dimensional texture, as is done in the work of Peachy (1 985)
+and Perlin (1985). Since these textures show proper
+changes in all directions, a surface can be textured
+by “placing” it into the three-dimensional texture. This
+is done by mapping the surface locations into the
+texture’s three-dimensional space. This eliminates the
+problem of texture seams, but increases the space
+required to represent the texture. </p>
+<h2>Static vs Functional Maps</h2>
+<p>Up to this point, all discussion has assumed that the texture is static, having
+been scanned into a file. This places restrictions on
+the texture.
+An alternative is a functional texture, i.e. the encoding
+of a texture in an equation-based routine. Surface
+indices are used as parameters for the equations. This
+removes the need to store the texture (a space reduction), but also reduces the speed of image production, as
+the function is likely to be more expensive to compute
+than a table look-up in an array (a time increase). This
+trade-off is tempered by the ability to alter system
+parameters dynamically, allowing the texture to evolve
+based on the natural demands of the image. Additionally, the texture is now potentially infinite in all directions, which eliminates scaling or cycling through a
+static texture that is used to cover an arbitrarily large
+surface.
+Functional texturing has been taken to a successful
+extreme by Geoffrey Gardner (1 985), who produces
+entire images based on a single formula, with parameters altered to produce mountains, clouds, and trees </p>
+<h1>Animation</h1>
+<p>Animated cartoons were the hallmark of Walt Disney,
+whose studio produced a number of classic films. This
+work, called cel animation, first requires the production of an overall storyboard. From that, individual
+scenes are created, with the animator drawing only
+key frames, an in-betweener drawing the frames connecting the key frames, and an inker adding the proper
+colors. The characters are drawn on acetate sheets
+called cels that are laid over the background and
+photographed to make the animated scene. Clearly,
+this is a labor-intensive process.
+Computers have helped to automate the animation
+process by taking over the in-betweening and inking
+processes. It is more common, however, for the
+computer to control the whole process (see COMPUTER
+ANIMATION). The animator describes the objects in the
+scene and how they are to move, and the computer
+takes over from there, moving each object to its new
+position before rendering the next image.
+Craig Reynolds (1987) has taken this one step further.
+His research into flocks, herds, and schools indicated
+that the members follow three simple rules: (1) stay
+close to the center of the flock, (2) match velocity
+with the neighbors, and (3) avoid collisions. His system
+then creates a set of actors, each adhering to these
+three rules, and allows them to move based on their
+own limited perception of the world. The resulting
+animation sequences show extremely realistic flocking
+behavior. With systems based on independent actors, 
+
+there is even less human effort. For some control over
+the result, it is possible to put in lead actors whose
+movements are scripted, which help to direct the other
+independent actor motions. </p>
+<h1>Fractals</h1>
+<p>Fractals are not a new area of research, but rather an
+old mathematical area that has received new life with
+the advent of computer graphics. The term fractal is
+derived from the fact that certain objects behave as if
+they have fractional dimensions. A line is one-dimensional, but a coast line is greater than one-dimensional
+and not quite two-dimensional because, at finer and
+finer resolutions, the coast line gets longer and longer
+without consuming any more outer area. As a onedimensional line forms a tight spiral into the center of
+a circle, it becomes more like a plane. Mountains
+operate similarly between two and three dimensions,
+and clouds between three and four dimensions.</p>
+<h2>Here are some computer graphics pdf:</h2>1)<a href="cg.pdf">Learn Computer Grahics Basics</a><br>
+2)<a href="cg1.pdf">Learn Tutorial of CG</a><br>3)<a href="cg3.pdf">Advance Computer Graphics</a>
+</body>
+
+
